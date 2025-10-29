@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: matchmaking
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn matchmaking_server.wsgi:application
+    env:
+      - key: PYTHON_VERSION
+        value: 3.13.4
