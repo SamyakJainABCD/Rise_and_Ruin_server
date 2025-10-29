@@ -1,1 +1,1 @@
-web: gunicorn matchmaking.wsgi
+web: gunicorn matchmaking.wsgi:application --bind 0.0.0.0:$PORT
